@@ -67,7 +67,7 @@ const cardVariants = {
 		},
 	}),
 	hover: {
-		scale: 1.04,
+		scale: 1.02,
 		boxShadow: "0 8px 32px 0 rgba(34,197,94,0.13)",
 		transition: { type: "spring", stiffness: 300, damping: 18 },
 	},
@@ -93,13 +93,13 @@ function PortfolioCard({
 		>
 			{/* Animated Icon */}
 			<motion.div
-				className={`absolute -top-8 left-6 ${iconBg} rounded-full w-16 h-16 flex items-center justify-center text-3xl shadow-lg border-2 border-white group-hover:scale-110 transition-all`}
+				className={`absolute top-0 left-0 ${iconBg}  rounded-l-xl rounded-full  w-12 h-12 flex items-center justify-center text-xl shadow-lg border-2 border-white group-hover:scale-110 transition-all`}
 				initial={{ scale: 0.8, rotate: -10 }}
 				animate={{ scale: 1, rotate: 0 }}
 				whileHover={{ scale: 1.15, rotate: 8 }}
 				transition={{ type: "spring", stiffness: 200, damping: 15 }}
 			>
-				<span className="animate-bounce-slow">{icon}</span>
+				<span className="animate-bounce-slow absolute bottom-0.5">{icon}</span>
 			</motion.div>
 			{/* Fancy Title */}
 			<h3 className="font-extrabold text-xl md:text-2xl text-green-900 mb-2 mt-10 flex items-center gap-2 tracking-tight font-display drop-shadow-sm">

@@ -99,7 +99,7 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-      <div className="relative flex justify-center w-full z-20 md:mt-4">
+      <div className="relative  z-20 md:mt-4">
         <div className="flex items-center gap-3 px-6 md:py-3 py-1 md:rounded-xl bg-gradient-to-r from-yellow-100 via-pink-100 to-green-100 shadow-lg border border-yellow-200 animate-pulse-slow">
           {/* Sparkles Left */}
           <svg

@@ -22,7 +22,7 @@ function HelpCard({
   iconColor,
 }: HelpCardProps) {
   return (
-    <div className="relative bg-white rounded-2xl shadow-xl p-7 flex flex-col items-center hover:shadow-2xl transition group border border-green-100 hover:border-green-300">
+    <div className="relative bg-white h-76 rounded-2xl shadow-xl p-7 flex flex-col items-center hover:shadow-2xl transition group border border-green-100 hover:border-green-300">
       <div
         className={`absolute -top-6 left-1/2 -translate-x-1/2 ${iconBg} rounded-full p-2 shadow-md`}
       >
@@ -53,8 +53,8 @@ function HelpCard({
           <li key={i}>• {point}</li>
         ))}
       </ul>
-      <div className="mt-4 flex items-center gap-2">
-        <span className={`inline-block ${badgeColor} text-xs px-3 py-1 rounded-full font-semibold`}>
+      <div className=" absolute bottom-3 flex items-center gap-2">
+        <span className={`inline-block  ${badgeColor} text-xs px-3 py-1 rounded-full font-semibold`}>
           {badge}
         </span>
         <svg className={`w-4 h-4 ${iconColor}`} fill="currentColor" viewBox="0 0 20 20">

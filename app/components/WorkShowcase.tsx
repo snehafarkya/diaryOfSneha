@@ -38,10 +38,10 @@ export default function WorkShowcase() {
         SELECTED_REPOS.map(async (repo) => {
           try {
             const res = await fetch(`https://api.github.com/repos/snehafarkya/${repo}`);
-            if (!res.ok) return null;
+            if (!res.ok) return console.error(`Failed to fetch repo: ${repo}`);
             return await res.json();
           } catch {
-            return null;
+            return console.error(`Failed to fetch repo: ${repo}`);
           }
         })
       );
