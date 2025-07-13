@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -100,6 +99,7 @@ export default function HashnodeBlogs() {
           animate="visible"
         >
           <AnimatePresence>
+            
             {blogs.map((blog, idx) => (
               <motion.a
                 key={blog.url + idx}
@@ -107,7 +107,7 @@ export default function HashnodeBlogs() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative group bg-white rounded-2xl shadow-lg p-0 flex flex-col overflow-hidden border border-green-100 hover:border-green-300 transition text-left"
-                variants={cardVariants}
+                variants={cardVariants as any}
                 whileHover="hover"
                 initial="hidden"
                 animate="visible"

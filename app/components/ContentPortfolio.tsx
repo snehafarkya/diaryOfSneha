@@ -85,7 +85,7 @@ function PortfolioCard({
 	return (
 		<motion.div
 			className={`relative bg-white rounded-2xl shadow-lg p-7 flex flex-col items-start text-left group border border-green-100 hover:border-green-300 transition overflow-hidden font-display`}
-			variants={cardVariants}
+			variants={cardVariants as any}
 			initial="hidden"
 			animate="visible"
 			whileHover="hover"
