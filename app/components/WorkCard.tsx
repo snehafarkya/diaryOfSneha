@@ -53,7 +53,7 @@ export default function WorkCard({ image, title, description, tags, repoUrl }: W
         <p className="text-sm text-gray-500 mb-2 line-clamp-2">{description}</p>
         <div className="flex flex-wrap gap-2 mt-2">
           {tags.map((tag) => (
-            <span key={tag} className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded">
+            <span key={tag} className="text-xs text-green-700 bg-green-100 px-2 py-1 rounded-full">
               {tag}
             </span>
           ))}

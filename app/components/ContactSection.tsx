@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
-import { FaTwitter, FaLinkedin, FaYoutube, FaUserFriends } from "react-icons/fa";
+import { FaTwitter, FaLinkedin, FaYoutube, FaUserFriends, FaGithub } from "react-icons/fa";
 import { SiPeerlist } from "react-icons/si";
+import { FaHashnode } from "react-icons/fa6";
 
 
 
@@ -17,13 +18,13 @@ const socials = [
   },
   {
     name: "LinkedIn",
-    href: "https://linkedin.com/in/snehafarkya",
+    href: "https://linkedin.com/in/sneha-farkya",
     icon: <FaLinkedin className="text-blue-700 group-hover:scale-110 transition" />,
   },
   {
     name: "Hashnode",
     href: "https://snehafarkya.hashnode.dev",
-    icon: <SiPeerlist className="text-[#2962ff] group-hover:scale-110 transition" />,
+    icon: <FaHashnode className="text-[#2962ff] group-hover:scale-110 transition" />,
   },
   {
     name: "Peerlist",
@@ -32,8 +33,13 @@ const socials = [
   },
   {
     name: "YouTube",
-    href: "https://youtube.com/@snehafarkya",
+    href: "https://youtube.com/@snhafarkya",
     icon: <FaYoutube className="text-red-500 group-hover:scale-110 transition" />,
+  },
+  {
+    name: "GitHub",
+    href: "https://github.com/snehafarkya",
+    icon: <FaGithub className=" group-hover:scale-110 transition" />,
   },
 ];
   // Simple validation
@@ -75,15 +81,16 @@ const socials = [
   }
 
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-[90vh] py-8 px-2 sm:px-6 max-w-xl mx-auto  rounded-2xl my-12">
+    <section className="relative flex md:flex-row flex-col gap-4  items-center justify-center min-h-[90vh] py-8 px-6 max-w-4xl mx-auto  rounded-2xl my-12">
       {/* Decorative Sparkle */}
       <svg className="absolute top-4 left-4 w-8 h-8 opacity-30" viewBox="0 0 24 24" fill="none">
         <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" stroke="#fbbf24" strokeWidth="2" strokeLinecap="round"/>
       </svg>
-      <h2 className="text-2xl md:text-3xl font-extrabold mb-2 text-green-900 tracking-tight text-center drop-shadow">
+      <div className="flex flex-col gap-2">
+      <h2 className="text-2xl md:text-3xl font-extrabold mb-2 text-green-900 tracking-tight  drop-shadow">
         Let’s Make Something <span className="bg-yellow-100 px-2 rounded">Great</span> Together!
       </h2>
-      <p className="text-base text-gray-700 mb-4 max-w-md mx-auto">
+      <p className="text-base text-gray-700 mb-4  mx-auto">
         Want to build, collaborate, or just connect? <br />
         Reach out via the form, email, or any of my socials below. <br />
         <span className="inline-flex items-center gap-1 font-semibold text-green-700">
@@ -91,7 +98,7 @@ const socials = [
         </span>
       </p>
      
-      <div className="flex items-center justify-center gap-3 mb-6">
+      <div className="flex items-center justify-center md:justify-start gap-3 mb-6">
         {socials.map(s => (
           <a
             key={s.name}
@@ -105,6 +112,8 @@ const socials = [
           </a>
         ))}
       </div>
+      </div>
+
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-md mx-auto rounded-xl shadow-none p-3 flex flex-col gap-3 bg-transparent"
@@ -149,15 +158,7 @@ const socials = [
           <div className="text-green-700 font-semibold mt-2">Thank you! Your message has been sent.</div>
         )}
       </form>
-      <p className="mt-4 text-xs text-gray-500">
-        Or just drop a line at{" "}
-        <a
-          href="mailto:sneha06.work@gmail.com"
-          className="underline text-green-700"
-        >
-          sneha06.work@gmail.com
-        </a>
-      </p>
+      
       {/* Decorative Sparkle */}
       <svg className="absolute bottom-4 right-4 w-8 h-8 opacity-20" viewBox="0 0 24 24" fill="none">
         <circle cx="12" cy="12" r="8" fill="#bbf7d0" />

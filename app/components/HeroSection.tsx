@@ -57,9 +57,9 @@ export default function HeroSection() {
       </svg>
       {/* Sparkling Highlighted Banner */}
       {/* Hero Content */}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-10 w-full max-w-5xl mx-auto z-10">
+      <div className="flex flex-col md:flex-row items-center py-10 md:py-0 px-6 justify-center gap-10 w-full max-w-5xl mx-auto z-10">
         {/* Text Content */}
-        <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left space-y-6">
+        <div className="order-2 md:order-1 flex-1 flex flex-col items-center md:items-start text-center md:text-left space-y-6">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-800 drop-shadow-lg animate-gradient-x bg-gradient-to-r from-blue-600 via-pink-500 to-purple-500 bg-clip-text text-transparent">
             Hi, I am Sneha
           </h1>
@@ -68,16 +68,23 @@ export default function HeroSection() {
             blogs, and videos as a frontend developer & technical writer.
           </p>
           <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mt-4">
-            <button className="bg-green-200 text-green-900 font-semibold px-8 py-3 rounded-full shadow hover:bg-green-300 transition">
-              See My Work
-            </button>
-            <button className="border border-green-300 text-green-900 font-semibold px-8 py-3 rounded-full hover:bg-green-100 transition">
-              Let’s Collaborate
-            </button>
-          </div>
+  <a
+    href="#work" // or use a scroll-to anchor to your Work section
+    className="bg-green-200 text-green-900 font-semibold px-8 py-3 rounded-full shadow hover:bg-green-300 transition"
+  >
+    See My Work
+  </a>
+  <a
+    href="mailto:snehafarkya@gmail.com?subject=Let's Collaborate"
+    className="border border-green-300 text-green-900 font-semibold px-8 py-3 rounded-full hover:bg-green-100 transition"
+  >
+    Let’s Collaborate
+  </a>
+</div>
+
         </div>
         {/* Hero Image */}
-        <div className="flex-1 flex items-center justify-center">
+        <div className="order-1 md:order-2 flex-1 flex items-center justify-center">
           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full shadow-2xl overflow-hidden border-4 border-green-100 bg-white/70">
             <Image
               src="/hero.png"
@@ -92,8 +99,8 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-      <div className="relative flex justify-center w-full z-20 mt-4">
-        <div className="flex items-center gap-3 px-6 py-3 rounded-xl bg-gradient-to-r from-yellow-100 via-pink-100 to-green-100 shadow-lg border border-yellow-200 animate-pulse-slow">
+      <div className="relative flex justify-center w-full z-20 md:mt-4">
+        <div className="flex items-center gap-3 px-6 md:py-3 py-1 md:rounded-xl bg-gradient-to-r from-yellow-100 via-pink-100 to-green-100 shadow-lg border border-yellow-200 animate-pulse-slow">
           {/* Sparkles Left */}
           <svg
             className="w-6 h-6 text-yellow-400 animate-spin-slow"

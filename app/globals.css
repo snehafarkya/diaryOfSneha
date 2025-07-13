@@ -14,6 +14,9 @@
     animation: blob2 18s ease-in-out infinite;
   }
 }
+html , body{
+  scroll-behavior: smooth;
+}
 
 @keyframes bgPan {
   0% { background-position: 0% 50%; }

@@ -14,14 +14,18 @@ const SELECTED_REPOS = [
 ];
 
 const AI_IMAGES: Record<string, string> = {
-  "todo-extension": "https://source.unsplash.com/featured/?todo,productivity,app",
-  "ai-meme-generator": "https://source.unsplash.com/featured/?ai,meme,funny",
-  "hashnode-api-use": "https://source.unsplash.com/featured/?blog,api,hashnode",
-  "github-repo-evolution-finder": "https://source.unsplash.com/featured/?github,code,search",
-  "Context-api-example": "https://source.unsplash.com/featured/?react,context,api",
-  "peerlist-assignment": "https://source.unsplash.com/featured/?team,network,assignment",
-  "Translate-Lingo": "https://source.unsplash.com/featured/?translate,language,ai"
+  "todo-extension": "./work/todo.png",
+  "ai-meme-generator": "./work/meme.png",
+  "hashnode-api-use": "./work/hashnode.png",
+  "github-repo-evolution-finder": "./work/github.png",
+  "Context-api-example": "./work/context.png",
+  "peerlist-assignment": "./work/peerlist.png",
+  "Translate-Lingo": "./work/translateLingo.png"
 };
+
+// Helper: Capitalize and clean repo name
+const formatRepoName = (name: string) =>
+  name.replace(/-/g, " ").replace(/\b\w/g, (char) => char.toUpperCase());
 
 export default function WorkShowcase() {
   const [repos, setRepos] = useState<any[]>([]);
@@ -32,20 +36,32 @@ export default function WorkShowcase() {
       setLoading(true);
       const repoData = await Promise.all(
         SELECTED_REPOS.map(async (repo) => {
-          const res = await fetch(`https://api.github.com/repos/snehafarkya/${repo}`);
-          if (!res.ok) return null;
-          return await res.json();
+          try {
+            const res = await fetch(`https://api.github.com/repos/snehafarkya/${repo}`);
+            if (!res.ok) return null;
+            return await res.json();
+          } catch {
+            return null;
+          }
         })
       );
       setRepos(repoData.filter(Boolean));
       setLoading(false);
     }
+
     fetchRepos();
   }, []);
 
   return (
-    <section className="mb-20 animate-fade-in-up">
-      <h2 className="text-3xl font-bold mb-6 text-center">Selected Work</h2>
+    <section id="work" className="mb-20 px-6 md:px-0 animate-fade-in-up">
+      <h2 className="text-3xl font-bold mb-2 text-center text-green-900">
+        🚀 Interface Engineering: A Frontend Showcase
+      </h2>
+      <p className="text-center text-gray-700 mb-8 max-w-2xl mx-auto">
+        Explore a selection of React + Next.js projects enhanced with Tailwind CSS, Firebase Auth, and SEO-first performance thinking.
+        Built with scalability, responsiveness, and modern UI/UX practices in mind.
+      </p>
+
       {loading ? (
         <div className="text-center py-10 text-blue-500 animate-pulse">Loading projects...</div>
       ) : (
@@ -57,7 +73,7 @@ export default function WorkShowcase() {
               <WorkCard
                 key={repo.id}
                 image={AI_IMAGES[repo.name] || "/vercel.svg"}
-                title={repo.name.replace(/-/g, " ").replace(/\b\w/g, (l: string) => l.toUpperCase())}
+                title={formatRepoName(repo.name)}
                 description={repo.description || "No description provided."}
                 tags={repo.topics?.length ? repo.topics : [repo.language || "JavaScript"]}
                 repoUrl={repo.html_url}

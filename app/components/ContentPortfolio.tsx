@@ -147,8 +147,8 @@ function PortfolioCard({
 
 export default function ContentPortfolio() {
 	return (
-		<section className="relative py-16 md:py-24 px-2 sm:px-8 max-w-5xl mx-auto flex flex-col items-center text-center animate-fade-in-up font-display">
-			<h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-green-900 tracking-tight drop-shadow">
+		<section className="relative py-16 md:py-24 px-6 sm:px-8 max-w-5xl mx-auto flex flex-col items-center text-center animate-fade-in-up font-display">
+			<h2 className="text-3xl md:text-5xl font-extrabold mb-4 text-green-900 tracking-tight drop-shadow">
 				My Content Creation & Writing Portfolio
 			</h2>
 			<p className="text-lg md:text-xl text-gray-700 mb-10 max-w-2xl mx-auto font-sans">

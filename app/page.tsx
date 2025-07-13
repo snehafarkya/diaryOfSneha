@@ -7,11 +7,7 @@ import ContentPortfolio from "./components/ContentPortfolio";
 import theme from "./theme";
 export default function Home() {
   return (
-    <main className={`${theme.primary} min-h-screen md:px-2 sm:px-6 py-0 font-sans overflow-x-hidden relative`}>
-      {/* --- HERO FOLD DECORATIVE SVGs --- */}
-      {/* Laptop with sparkles - top left */}
-      {/*  */}
-      {/* Suitcase with travel sticker - bottom left */}
+    <main className={`${theme.primary} min-h-screen md:px-2 sm:px-6 md:py-0  font-sans overflow-x-hidden relative`}>
       <svg
         className="hidden md:block absolute bottom-30 left-12 w-20 h-20 opacity-20 z-0"
         viewBox="0 0 64 64"
@@ -97,12 +93,13 @@ export default function Home() {
       <section className="relative z-10 min-h-[100vh] flex items-center justify-center">
         <HeroSection />
       </section>
+        <AboutSection />
+
       <div className="relative z-10 max-w-5xl mx-auto">
         {/* Only show HelpSection after HeroSection */}
         <HelpSection />
         <ContentPortfolio />
         <WorkShowcase />
-        <AboutSection />
         <ContactSection />
       </div>
     </main>

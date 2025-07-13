@@ -115,7 +115,7 @@ const helpCards = [
 
 export default function HelpSection() {
   return (
-    <section className="relative py-16 md:py-24 px-2 sm:px-8 max-w-4xl mx-auto flex flex-col items-center text-center animate-fade-in-up">
+    <section className="relative py-16 md:py-24 px-6 sm:px-8 max-w-4xl mx-auto flex flex-col items-center text-center animate-fade-in-up">
       <h2 className="text-3xl md:text-4xl font-bold mb-4 text-green-900">
         How I Can Help You Shine
       </h2>
