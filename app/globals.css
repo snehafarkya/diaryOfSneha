@@ -1,26 +1,68 @@
 @import "tailwindcss";
+@tailwind utilities;
+/* @import "tailwindcss/preflight"; */
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  .animate-bg-pan {
+    background-size: 400% 400%;
+    animation: bgPan 18s linear infinite;
+  }
+  .animate-blob1 {
+    animation: blob1 16s ease-in-out infinite;
+  }
+  .animate-blob2 {
+    animation: blob2 18s ease-in-out infinite;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes bgPan {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
+@keyframes blob1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(40px, -30px) scale(1.1); }
+  66% { transform: translate(-30px, 20px) scale(0.95); }
+}
+@keyframes blob2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-40px, 30px) scale(1.08); }
+  66% { transform: translate(30px, -20px) scale(0.97); }
+}
+/* Custom Animations */
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 1.2s ease-in;
+  }
+  .animate-fade-in-up {
+    animation: fadeInUp 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .animate-gradient-x {
+    background-size: 200% 200%;
+    animation: gradientX 3s ease-in-out infinite;
+  }
+  .animate-bg-pan {
+    background-size: 400% 400%;
+    animation: bgPan 10s linear infinite;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes gradientX {
+  0%, 100% { background-position: left center; }
+  50% { background-position: right center; }
+}
+@keyframes bgPan {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+

@@ -1,0 +1,6 @@
+<!-- filepath: /public/illustration-writing.svg -->
+<svg width="80" height="80" viewBox="0 0 64 64" fill="none">
+  <rect x="28" y="8" width="8" height="38" rx="4" fill="#fbbf24"/>
+  <polygon points="32,54 36,48 32,62 28,48" fill="#f59e42"/>
+  <path d="M44 18c-2-2-5-2-7 0-2-2-5-2-7 0-2 2-2 5 0 7l7 7 7-7c2-2 2-5 0-7z" fill="#f472b6"/>
+</svg>
