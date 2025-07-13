@@ -134,7 +134,7 @@ export default function HelpSection() {
         turn your ideas into impactful digital experiences!
       </p>
       <a
-        href="https://cal.com/snehafarkya/meet"
+        href="https://cal.com/sneha-farkya"
         target="_blank"
         rel="noopener noreferrer"
         className="inline-block mt-8 bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-3 rounded-full shadow transition text-lg"
