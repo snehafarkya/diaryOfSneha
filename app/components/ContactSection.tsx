@@ -123,7 +123,7 @@ const socials = [
           type="text"
           name="name"
           placeholder="Your Name"
-          className="px-4 py-2 rounded-lg border border-green-100 focus:border-green-400 outline-none text-base"
+          className="px-4 py-2 rounded-lg border border-green-300 focus:border-green-600 outline-none text-base"
           value={form.name}
           onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
           required
@@ -132,7 +132,7 @@ const socials = [
           type="email"
           name="email"
           placeholder="Your Email"
-          className="px-4 py-2 rounded-lg border border-green-100 focus:border-green-400 outline-none text-base"
+          className="px-4 py-2 rounded-lg border border-green-300 focus:border-green-600 outline-none text-base"
           value={form.email}
           onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
           required
@@ -141,7 +141,7 @@ const socials = [
           name="message"
           placeholder="Your Message"
           rows={3}
-          className="px-4 py-2 rounded-lg border border-green-100 focus:border-green-400 outline-none resize-none text-base"
+          className="px-4 py-2 rounded-lg border border-green-300 focus:border-green-600 outline-none resize-none text-base"
           value={form.message}
           onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
           required
