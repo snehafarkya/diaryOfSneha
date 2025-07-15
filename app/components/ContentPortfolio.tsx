@@ -36,7 +36,7 @@ const portfolioItems = [
 			"Published video tutorials on web development",
 			"Engaged with the dev community through series & explainers",
 		],
-		link: "https://www.youtube.com/playlist?list=PLyourplaylistid",
+		link: "https://www.youtube.com/playlist?list=PLSmRHw8aaaanPVPBurWKIqMUOt9dodKoA",
 		linkText: "Watch the playlist",
 	},
 	{
@@ -48,8 +48,8 @@ const portfolioItems = [
 			"Authored hackathon guides & impact articles",
 			"Hosted events, webinars, and won Twilio prize",
 		],
-		link: "https://devpost.com/software/budgetstay",
-		linkText: "See winning project",
+		link: "https://hackthisfall.tech/blog",
+		linkText: "Read article 3rd, 4th, and 6th",
 	},
 ];
 
@@ -147,7 +147,7 @@ function PortfolioCard({
 
 export default function ContentPortfolio() {
 	return (
-		<section className="relative py-16 md:py-24 px-6 sm:px-8 max-w-5xl mx-auto flex flex-col items-center text-center animate-fade-in-up font-display">
+		<section id="work" className="relative py-16 md:py-24 px-6 sm:px-8 max-w-5xl mx-auto flex flex-col items-center text-center animate-fade-in-up font-display">
 			<h2 className="text-3xl md:text-5xl font-extrabold mb-4 text-green-900 tracking-tight drop-shadow">
 				My Content Creation & Writing Portfolio
 			</h2>

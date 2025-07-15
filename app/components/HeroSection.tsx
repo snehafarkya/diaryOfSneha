@@ -3,7 +3,6 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <section className="relative w-full flex flex-col items-center justify-center min-h-[100vh] text-center space-y-6 mb-0 animate-fade-in overflow-hidden bg-gradient-to-br from-green-50 via-white to-blue-50">
-      {/* Decorative SVGs and blobs */}
       {/* Laptop SVG */}
       <svg
         className="absolute left-8 top-8 w-16 h-16 opacity-60 z-0"

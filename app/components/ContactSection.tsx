@@ -60,7 +60,7 @@ const socials = [
     }
     setStatus("sending");
 
-    // Use Formspree (or similar) for real email delivery
+    // Using Formspree for real email delivery
     const res = await fetch("https://formspree.io/f/movlavre", {
       method: "POST",
       headers: { Accept: "application/json" },

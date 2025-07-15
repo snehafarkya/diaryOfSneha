@@ -7,7 +7,7 @@ import ContentPortfolio from "./components/ContentPortfolio";
 import theme from "./theme";
 export default function Home() {
   return (
-    <main className={`${theme.primary} min-h-screen md:px-2 sm:px-6 md:py-0  font-sans overflow-x-hidden relative`}>
+    <main className={`${theme.primary} min-h-screen md:px-0 sm:px-6 md:py-0  font-sans overflow-x-hidden relative`}>
       <svg
         className="hidden md:block absolute bottom-30 left-12 w-20 h-20 opacity-20 z-0"
         viewBox="0 0 64 64"
@@ -96,7 +96,6 @@ export default function Home() {
         <AboutSection />
 
       <div className="relative z-10 max-w-5xl mx-auto">
-        {/* Only show HelpSection after HeroSection */}
         <HelpSection />
         <ContentPortfolio />
         <WorkShowcase />

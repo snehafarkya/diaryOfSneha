@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import WorkCard from "./WorkCard";
 
 const SELECTED_REPOS = [
+  "voice-mood-detector",
   "todo-extension",
   "ai-meme-generator",
   "hashnode-api-use",
@@ -14,6 +15,7 @@ const SELECTED_REPOS = [
 ];
 
 const AI_IMAGES: Record<string, string> = {
+  "voice-mood-detector": "./work/voice.png",
   "todo-extension": "./work/todo.png",
   "ai-meme-generator": "./work/meme.png",
   "hashnode-api-use": "./work/hashnode.png",
@@ -53,7 +55,7 @@ export default function WorkShowcase() {
   }, []);
 
   return (
-    <section id="work" className="mb-20 px-6 md:px-0 animate-fade-in-up">
+    <section className="mb-20 px-6 md:px-0 animate-fade-in-up">
       <h2 className="text-3xl font-bold mb-2 text-center text-green-900">
         🚀 Interface Engineering: A Frontend Showcase
       </h2>
